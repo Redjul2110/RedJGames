@@ -17,59 +17,27 @@
   <!-- Favicon -->
   <link rel="icon" href="https://raw.githubusercontent.com/Redjul2110/RedJGames/main/main.jpg" type="image/jpeg">
 
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Zufällige Weiterleitung 0–1 Sekunde -->
-  <script>
-    const delay = Math.random() * 1000;
-    setTimeout(() => {
-      window.location.replace("https://redjgames.base44.app/");
-    }, delay);
-  </script>
 </head>
 <body>
 
-  <!-- Lade-Kreis -->
-  <div class="loader"></div>
+  <!-- Container -->
+  <div class="container">
 
-  <!-- Unsichtbarer SEO-Content -->
-  <div class="seo-content">
-    <h1>RedJgames</h1>
-    <p>RedJgames bietet kostenlose Browser Games wie RedOS, Jumper und Jumper2.</p>
-    <p>
-    Jumper2 
-    <a href="https://jumper-redjgames.netlify.app/" download="Download" style="color: blue; text-decoration: underline;">
-        Download
-    </a>
-    der Datei.
-    </p>
+    <!-- Pulsierender Kreis -->
+    <div class="loader"></div>
 
-    <p>
-    RedOS 
-    <a href="https://redjul2110.github.io/RedOS/" download="Download" style="color: blue; text-decoration: underline;">
-        Download
-    </a>
-    der Datei.
-    </p>
+    <!-- Titel & Text -->
+    <h1>Willkommen bei RedJgames</h1>
+    <p>Erlebe kostenlose Browser Games wie RedOS, Jumper und Jumper2.</p>
 
-    <p>
-    Controller Flight 
-    <a href="https://redjul2110.github.io/controller-flight/" download="Download" style="color: blue; text-decoration: underline;">
-        Download
-    </a>
-    der Datei.
-    </p>
-
-    <p>
-    Aktien Sim 
-    <a href="https://aktien-sim-redjgames.netlify.app/" download="Download" style="color: blue; text-decoration: underline;">
-        Download
-    </a>
-    der Datei.
-    </p>
-
+    <!-- Weiter Button -->
+    <button id="continueBtn">Weiter zu RedJgames</button>
 
   </div>
 
+  <!-- Script für Button -->
+  <script src="script.js"></script>
 </body>
 </html>
