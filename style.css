@@ -1,42 +1,47 @@
-/* Vollbild schwarzer Hintergrund */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hintergrund */
 body {
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background-color: #000000;
-  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  overflow: hidden;
 }
 
-/* Container für zentriertes Logo */
-.logo-container {
-  display:flex;
-  justify-content:center;
-  align-items:center;
+/* Pulsierender roter Kreis */
+.loader {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff0000, #a00000);
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 80px rgba(255, 0, 0, 0.9);
 }
 
-/* Pulsierendes Logo mit starkem rotem Glow */
-.pulsing-logo {
-  width:200px;
-  height:auto;
-  animation: pulse 2s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
-  border-radius:10px;
-}
-
-/* Pulsieren */
+/* Puls-Animation */
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.3); }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.35);
+    box-shadow: 0 0 140px rgba(255, 0, 0, 1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 60px rgba(255, 0, 0, 0.7);
+  }
 }
 
-/* Starkes rotes Glow */
-@keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 40px rgba(255,0,0,0.7); }
-  50% { box-shadow: 0 0 80px rgba(255,0,0,1); }
-}
-
-/* SEO Content unsichtbar */
+/* SEO Content komplett unsichtbar */
 .seo-content {
-  display:none;
+  display: none;
 }
