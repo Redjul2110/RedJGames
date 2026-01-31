@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RedJgames – Browser Games</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RedJgames – Browser Games</title>
 
-  <!-- Google & Bing Verifizierung -->
-  <meta name="google-site-verification" content="uorp-2o6cyD8nZlwgHHgDZ-kD1nvN3yCkjA3XuYJnv4">
-  <meta name="msvalidate.01" content="8A100A9890A9AB172E8983E45432A263">
+<!-- Google / Bing Verifizierung -->
+<meta name="google-site-verification" content="uorp-2o6cyD8nZlwgHHgDZ-kD1nvN3yCkjA3XuYJnv4">
+<meta name="msvalidate.01" content="8A100A9890A9AB172E8983E45432A263">
 
-  <!-- SEO -->
-  <meta name="description" content="RedJgames – Kostenlose Browser Games und Online Games.">
-  <meta name="keywords" content="RedJgames, Free Games, Browser Games, Online Games">
-  <meta name="robots" content="index, follow">
+<meta name="description" content="RedJgames – Kostenlose Browser Games. Spiele RedOS, Jumper und mehr direkt im Browser.">
+<meta name="keywords" content="RedJgames, Browser Games, Free Games, RedOS, Jumper, Jumper2, Portfolio, FAQ">
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://raw.githubusercontent.com/Redjul2110/RedJGames/main/main.jpg" type="image/jpeg">
+<link rel="icon" href="main.jpg" type="image/jpeg">
+<link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Zufällige Weiterleitung 0–1 Sekunde -->
-  <script>
-    const delay = Math.random() * 1000;
-    setTimeout(() => {
-      window.location.replace("https://redjgames.base44.app/");
-    }, delay);
-  </script>
+<!-- Zufällige Weiterleitung zwischen 0 und 1 Sekunde -->
+<script>
+  const delay = Math.random() * 1000;
+  setTimeout(() => {
+    window.location.replace("Home.html");
+  }, delay);
+</script>
 </head>
 <body>
 
-  <!-- Lade-Kreis -->
-  <div class="loader"></div>
+<header>
+  <h1>RedJgames</h1>
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="Games.html">Games</a>
+    <a href="Portfolio.html">Portfolio</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="Bilder.html">Bilder</a>
+  </nav>
+</header>
 
-  <!-- Unsichtbarer SEO-Content -->
-  <div class="seo-content">
-    <h1>RedJgames</h1>
-    <p>RedJgames bietet kostenlose Browser Games wie RedOS, Jumper und Jumper2.</p>
-  </div>
+<main class="center">
+  <p>Weiterleitung…</p>
+</main>
+
+<footer>
+  &copy; 2026 RedJgames
+</footer>
 
 </body>
 </html>
