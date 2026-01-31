@@ -10,16 +10,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #000000, #1a1a1a);
+  background: radial-gradient(circle at top left, #000, #111);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   overflow: hidden;
+  position: relative;
+}
+
+/* Hintergrund Animation mit orangenen Akzenten */
+body::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: radial-gradient(circle, rgba(255,140,0,0.15), transparent 60%);
+  animation: bgMove 15s linear infinite;
+  z-index: 0;
+}
+
+@keyframes bgMove {
+  0% { transform: translate(0,0) rotate(0deg);}
+  50% { transform: translate(50px, 30px) rotate(15deg);}
+  100% { transform: translate(0,0) rotate(0deg);}
 }
 
 /* Container */
 .container {
   text-align: center;
   position: relative;
+  z-index: 1;
   width: 90%;
   max-width: 500px;
   padding: 2rem;
@@ -27,21 +48,28 @@ body {
 
 /* Logo Text */
 .logo-text {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: #fff;
   margin-bottom: 2rem;
-  transition: all 0.7s ease;
+  transition: all 0.5s ease;
+  cursor: default;
 }
 
-/* Großes G wie im Bild */
-.logo-text::after {
-  content: '';
+/* Rotes J */
+.red-j {
+  color: #ff4500;
+}
+
+/* Hover Effekt auf Text */
+.logo-text:hover {
+  transform: scale(1.05);
+  color: #ffa500;
+  transition: all 0.3s ease;
 }
 
 /* Button */
 #continueBtn {
-  background: #ff0000;
+  background: #ff4500;
   color: #fff;
   border: none;
   padding: 1rem 2.5rem;
@@ -49,11 +77,11 @@ body {
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 20px rgba(255,0,0,0.6);
+  box-shadow: 0 0 20px rgba(255,69,0,0.6);
   margin-bottom: 2rem;
 }
 #continueBtn:hover {
-  background: #ff4d4d;
+  background: #ff7f32;
   transform: scale(1.05);
 }
 
@@ -67,7 +95,7 @@ body {
   animation: pulse 2s ease-in-out infinite;
   box-shadow: 0 0 80px rgba(255, 0, 0, 0.9);
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 /* Puls Animation */
@@ -86,24 +114,12 @@ body {
   }
 }
 
-/* Schwarz-Bildschirm Animation */
+/* Fade-Out Animation für Text & Button */
 .fade-out {
   animation: fadeOut 0.5s forwards;
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-.full-black {
-  background-color: #000;
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index: 10;
-  opacity: 1;
-  transition: opacity 0.5s ease;
+  0% { opacity:1; transform: scale(1);}
+  100% { opacity:0; transform: scale(0.8);}
 }
