@@ -1,29 +1,31 @@
-/* Grundlayout */
+/* Hintergrund mit sanftem Farbverlauf schwarz → rot → orange */
 body {
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a, #ff1a1a, #ff6600);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
     font-family: Arial, sans-serif;
 }
 
-/* Nur Ladekreis sichtbar */
+/* Ladekreis Container */
 .loader-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Großer, cooler Ladekreis */
+/* Großer, animierter Ladekreis */
 .loader {
-    border: 20px solid #f3f3f3;
+    border: 20px solid rgba(255,255,255,0.2);
     border-top: 20px solid #ff6600;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     animation: spin 1.5s linear infinite, pulse 2s ease-in-out infinite;
 }
 
@@ -35,11 +37,18 @@ body {
 
 /* Puls-Effekt */
 @keyframes pulse {
-    0%, 100% { transform: scale(1);}
+    0%,100% { transform: scale(1);}
     50% { transform: scale(1.2);}
 }
 
-/* Fake-Content bleibt für Google unsichtbar */
+/* Farbverlauf Animation */
+@keyframes gradientShift {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Fake-Content nur für Google sichtbar */
 .fake-content {
     display: none;
 }
