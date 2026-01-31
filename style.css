@@ -1,58 +1,45 @@
+/* Grundlayout */
 body {
-    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #1a1a1a;
-    color: #f5f5f5;
-    text-align: center;
-    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    color: #ff6600;
-    font-size: 2.2em;
-}
-
-p {
-    font-size: 18px;
-    margin: 15px 0;
+/* Nur Ladekreis sichtbar */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Großer, cooler Ladekreis */
 .loader {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #ff6600;
+    border: 20px solid #f3f3f3;
+    border-top: 20px solid #ff6600;
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin: 40px auto;
     animation: spin 1.5s linear infinite, pulse 2s ease-in-out infinite;
 }
 
+/* Rotation */
 @keyframes spin {
     0% { transform: rotate(0deg);}
     100% { transform: rotate(360deg);}
 }
 
+/* Puls-Effekt */
 @keyframes pulse {
     0%, 100% { transform: scale(1);}
     50% { transform: scale(1.2);}
 }
 
-.container {
-    max-width: 700px;
-    margin: auto;
-}
-
-a.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background-color: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-}
-
-a.button:hover {
-    background-color: #ff9900;
+/* Fake-Content bleibt für Google unsichtbar */
+.fake-content {
+    display: none;
 }
