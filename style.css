@@ -11,14 +11,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000;
-  overflow: hidden;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+/* Container zentriert */
+.container {
+  text-align: center;
+  padding: 2rem;
 }
 
 /* Pulsierender roter Kreis */
 .loader {
   width: 180px;
   height: 180px;
+  margin: 0 auto 2rem auto;
   border-radius: 50%;
   background: radial-gradient(circle, #ff0000, #a00000);
   animation: pulse 2s ease-in-out infinite;
@@ -41,7 +49,29 @@ body {
   }
 }
 
-/* SEO Content komplett unsichtbar */
-.seo-content {
-  display: none;
+/* Titel & Text */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+#continueBtn {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+#continueBtn:hover {
+  background: #ff4d4d;
+  transform: scale(1.05);
 }
