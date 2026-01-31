@@ -2,50 +2,37 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>RedJgames – Kostenlose Browser Games</title>
+    <title>RedJgames – Browser Games</title>
 
     <!-- Google / Bing Verifizierung -->
     <meta name="google-site-verification" content="uorp-2o6cyD8nZlwgHHgDZ-kD1nvN3yCkjA3XuYJnv4">
     <meta name="msvalidate.01" content="8A100A9890A9AB172E8983E45432A263">
 
     <!-- SEO -->
-    <meta name="description" content="RedJgames – Kostenlose Browser Games direkt im Browser. Spiele RedOS, Jumper, Jumper2 und weitere Spiele.">
-    <meta name="keywords" content="RedJgames, Free Games, Browser Games, RedOS, Jumper, Jumper2, Online Games, Spiele, Portfolio, Home, Bilder">
+    <meta name="description" content="RedJgames – Kostenlose Browser Games. Spiele RedOS, Jumper, Jumper2 direkt im Browser. Home, Portfolio und Bilder inklusive.">
+    <meta name="keywords" content="RedJgames, Free Games, Browser Games, RedOS, Jumper, Jumper2, Portfolio, Home, Bilder">
     <meta name="robots" content="index, follow">
 
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- JS für Weiterleitung -->
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>RedJgames lädt …</h1>
-        <p>Bereite deine Spiele vor: RedOS, Jumper & Jumper2</p>
-
-        <!-- Großer Ladekreis -->
+    <!-- Nur Ladekreis für Nutzer -->
+    <div class="loader-container">
         <div class="loader"></div>
-
-        <!-- Fallback -->
-        <noscript>
-            <p>Klicke hier, um zur neuen Webseite zu gelangen: <a href="https://redjgames.base44.app">Neue Webseite starten</a></p>
-        </noscript>
     </div>
 
-    <!-- Fake-Content für Google (nicht sichtbar für Nutzer) -->
+    <!-- Fake-Content für Google (unsichtbar für Nutzer) -->
     <div class="fake-content" style="display:none;">
-        <h2>RedJgames Browser Games</h2>
-        <p>Spiele RedOS, Jumper, Jumper2 und viele weitere Free Games direkt im Browser.</p>
+        <h1>RedJgames – Kostenlose Browser Games</h1>
+        <p>Spiele RedOS, Jumper, Jumper2 und viele weitere Browser Games direkt im Browser.</p>
 
-        <h3>Home</h3>
-        <p>Willkommen bei RedJgames – entdecke neue Spiele, Updates und Tipps!</p>
+        <h2>Home</h2>
+        <p>Willkommen bei RedJgames – entdecke neue Spiele und Updates.</p>
 
-        <h3>Portfolio</h3>
-        <p>Hier zeigen wir unsere beliebtesten Spiele und Projekte.</p>
+        <h2>Portfolio</h2>
+        <p>Unsere beliebtesten Spiele und Projekte im Überblick.</p>
 
-        <h3>Bilder</h3>
-        <p>Beispiele von RedJgames-Inhalten:</p>
+        <h2>Bilder</h2>
         <img src="main.jpg" alt="RedJgames Logo" style="width:400px; height:auto;">
 
         <ul>
@@ -53,8 +40,17 @@
             <li>Jumper – springe durch die Level</li>
             <li>Jumper2 – neue Version mit Extra-Herausforderungen</li>
         </ul>
-
         <p>Weitere Browser Games werden regelmäßig hinzugefügt!</p>
     </div>
+
+    <!-- Weiterleitung nach kurzer Zeit -->
+    <script>
+        window.addEventListener('load', () => {
+            // 2 Sekunden Ladezeit, dann weiterleiten
+            setTimeout(() => {
+                window.location.replace("https://redjgames.base44.app");
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
