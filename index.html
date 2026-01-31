@@ -3,35 +3,69 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Google Search Console Verifizierung -->
+    <!-- Google & Bing Verifizierung -->
     <meta name="google-site-verification" content="uorp-2o6cyD8nZlwgHHgDZ-kD1nvN3yCkjA3XuYJnv4">
-
-    <!-- Bing Webmaster Tools Verifizierung -->
     <meta name="msvalidate.01" content="8A100A9890A9AB172E8983E45432A263">
 
     <!-- SEO -->
-    <title>RedJgames – Free Browser Games</title>
-    <meta name="description" content="RedJgames bietet kostenlose Browser Games. Spiele Free Games direkt im Browser.">
+    <title>RedJgames – Kostenlose Browser Games</title>
+    <meta name="description" content="RedJgames bietet kostenlose Browser Games. Spiele Free Games direkt im Browser über RedJgames.">
     <meta name="keywords" content="RedJgames, Games, Free Games, Browser Games, Online Games">
     <meta name="robots" content="index, follow">
-
-    <!-- Canonical -->
     <link rel="canonical" href="https://redjgames.base44.app">
-
-    <!-- Favicon (main.jpg im selben Ordner) -->
-    <link rel="icon" href="main.jpg" type="image/jpeg">
 
     <!-- JavaScript Weiterleitung -->
     <script>
-        window.location.replace("https://redjgames.base44.app");
+        // Automatische Weiterleitung nach 1 Sekunde
+        setTimeout(function() {
+            window.location.replace("https://redjgames.base44.app");
+        }, 1000);
     </script>
+
+    <!-- Einfaches CSS für Design -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff6600; /* Orange wie dein Theme */
+        }
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
-    <noscript>
+    <div class="container">
+        <!-- Logo / Marke -->
+        <img src="main.jpg" alt="RedJgames Logo" class="logo">
+
+        <h1>Willkommen bei RedJgames!</h1>
         <p>
-            Weiterleitung zu 
-            <a href="https://redjgames.base44.app">RedJgames</a>
+            Spiele kostenlose Browser Games direkt über RedJgames. 
+            Du wirst gleich automatisch weitergeleitet.
         </p>
-    </noscript>
+        <p>
+            Falls die Weiterleitung nicht funktioniert, klicke hier: 
+            <a href="https://redjgames.base44.app">RedJgames starten</a>
+        </p>
+    </div>
 </body>
 </html>
