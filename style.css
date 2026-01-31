@@ -16,7 +16,7 @@ body {
   align-items:center;
 }
 
-/* Pulsierendes Logo */
+/* Pulsierendes Logo mit großem roten Glow */
 .pulsing-logo {
   width:200px;
   height:auto;
@@ -26,14 +26,14 @@ body {
 
 /* Pulsieren */
 @keyframes pulse {
-  0%,100% { transform: scale(1); }
+  0%, 100% { transform: scale(1); }
   50% { transform: scale(1.2); }
 }
 
-/* Glow-Effekt */
+/* Glow Effekt */
 @keyframes glowPulse {
-  0%,100% { box-shadow: 0 0 15px rgba(255,165,0,0.7); }
-  50% { box-shadow: 0 0 35px rgba(255,165,0,1); }
+  0%, 100% { box-shadow: 0 0 30px rgba(255,0,0,0.7); }
+  50% { box-shadow: 0 0 60px rgba(255,0,0,1); }
 }
 
 /* SEO Content unsichtbar */
