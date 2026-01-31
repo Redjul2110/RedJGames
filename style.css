@@ -1,33 +1,42 @@
-/* Hintergrund in 3 gleich großen Farben: Schwarz, Rot, Orange */
+/* Vollbild schwarzer Hintergrund */
 body {
   margin:0;
   height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  background: linear-gradient(to right, #000000 0%, #000000 33.3333%, #ff0000 33.3333%, #ff0000 66.6666%, #ff6600 66.6666%, #ff6600 100%);
+  background-color: #000000;
   font-family: Arial, sans-serif;
 }
 
-/* Container für zentriertes Bild */
-.image-container {
+/* Container für zentriertes Logo */
+.logo-container {
   display:flex;
   justify-content:center;
   align-items:center;
 }
 
-/* Pulsierendes Bild */
-.pulsing-image {
+/* Pulsierendes Logo */
+.pulsing-logo {
   width:200px;
   height:auto;
-  animation: pulse 2s ease-in-out infinite;
+  animation: pulse 2s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+  border-radius:10px;
 }
 
 /* Pulsieren */
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
+  0%,100% { transform: scale(1); }
   50% { transform: scale(1.2); }
 }
 
+/* Glow-Effekt */
+@keyframes glowPulse {
+  0%,100% { box-shadow: 0 0 15px rgba(255,165,0,0.7); }
+  50% { box-shadow: 0 0 35px rgba(255,165,0,1); }
+}
+
 /* SEO Content unsichtbar */
-.seo-content { display:none; }
+.seo-content {
+  display:none;
+}
