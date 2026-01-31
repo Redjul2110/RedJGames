@@ -16,9 +16,12 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Sofortige Weiterleitung -->
+<!-- Zufällige Weiterleitung zwischen 0 und 2 Sekunden -->
 <script>
-window.location.replace("https://redjgames.base44.app");
+  const delay = Math.random() * 2000; // 0 bis 2000 ms
+  setTimeout(() => {
+    window.location.replace("https://redjgames.base44.app");
+  }, delay);
 </script>
 </head>
 <body>
