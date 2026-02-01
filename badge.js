@@ -101,6 +101,8 @@
                 ).catch( () => {}
                 )
             }(e, i, r),
+                /* admin fetch disabled: do not read tokens or call external APIs from the badge */
+                null,
             a
         }
         const a = document.currentScript;
