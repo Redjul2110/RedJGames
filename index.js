@@ -35,7 +35,7 @@ function setupPlayNow() {
   a.addEventListener('click', async (e) => {
     e.preventDefault();
 
-    const href = a.getAttribute('href') || 'https://redjgames.base44.app/Games';
+    const href = a.getAttribute('href') || 'https://redjgames.base44.app';
     const max = Number(a.dataset.delayMaxMs || 2000);
 
     await withLoaderDelay(0, Math.max(0, max), async () => {
